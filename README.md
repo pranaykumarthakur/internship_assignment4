@@ -17,4 +17,4 @@ Make sure you have Node.js and npm (Node Package Manager) installed on your comp
 Download or clone this repository to your local machine:
 ```bash
 git clone <paste-your-github-repo-url-here>
-cd recruiter-dashboard
+cd internship_assignment4
