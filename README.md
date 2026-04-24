@@ -16,5 +16,5 @@ Make sure you have Node.js and npm (Node Package Manager) installed on your comp
 ### 2. Clone the Repository
 Download or clone this repository to your local machine:
 ```bash
-git clone <paste-your-github-repo-url-here>
+git clone <https://github.com/pranaykumarthakur/internship_assignment4.git>
 cd internship_assignment4
