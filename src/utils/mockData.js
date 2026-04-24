@@ -5,12 +5,13 @@ const lastNames = ["Sharma", "Verma", "Patel", "Singh", "Kumar", "Gupta", "Desai
 
 export const generateCandidates = (count = 50) => {
   return Array.from({ length: count }, (_, i) => {
+    // Real-world scenario: ATS and GitHub are auto-scraped. Assignment/Video require human review (start at 0).
     const scores = {
-      assignment: Math.floor(Math.random() * 40) + 60, // 60-100
-      video: Math.floor(Math.random() * 50) + 50,      // 50-100
-      ats: Math.floor(Math.random() * 60) + 40,        // 40-100
-      github: Math.floor(Math.random() * 50) + 50,     // 50-100
-      communication: Math.floor(Math.random() * 40) + 60 // 60-100
+      assignment: 0, 
+      video: 0,      
+      ats: Math.floor(Math.random() * 40) + 60,        
+      github: Math.floor(Math.random() * 40) + 60,     
+      communication: 0 
     };
     
     const finalScore = calculateFinalScore(scores);
@@ -18,10 +19,12 @@ export const generateCandidates = (count = 50) => {
     return {
       id: `CAND-${1000 + i}`,
       name: `${firstNames[i % 10]} ${lastNames[Math.floor(i / 10) % 10]}`,
+      college: "Christ University",
       role: "Frontend Intern",
       scores,
       finalScore,
-      status: getPriorityStatus(finalScore).label
+      status: getPriorityStatus(finalScore).label,
+      reviewStatus: "Pending" // Everyone starts in the Pending queue
     };
   });
 };
